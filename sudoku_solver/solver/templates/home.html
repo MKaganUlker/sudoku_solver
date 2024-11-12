@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sudoku Solver</title>
+</head>
+<body>
+    <h1>Upload a Sudoku Image</h1>
+    <form action="{% url 'solve' %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="image" accept="image/*" required>
+        <button type="submit">Solve Sudoku</button>
+    </form>
+</body>
+</html>
